@@ -4,7 +4,7 @@ import PrimaryHeader from 'components/header/PrimaryHeader';
 import SimpleBottomNavigation from 'components/footer/SimpleBottomNavigation';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import HomePage from 'views/home/HomePage';
+import ApplicationRoutes from 'routes/ApplicationRoutes';
 
 const MainLayout = props => {
   return (
@@ -12,7 +12,7 @@ const MainLayout = props => {
       <PrimaryHeader />
       <Container maxWidth="md">
         <Typography component="div" style={{ minHeight: '80vh' }}>
-          <HomePage />
+          <ApplicationRoutes />
         </Typography>
       </Container>
       <SimpleBottomNavigation />
