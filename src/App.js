@@ -1,8 +1,9 @@
 import React from 'react';
 import MainLayout from 'views/landingpages/MainLayout';
 
-function App() {
+const App = () => 
+{
   return <MainLayout />;
-}
+};
 
 export default App;

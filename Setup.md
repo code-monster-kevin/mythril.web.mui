@@ -27,13 +27,9 @@ npm i typeface-roboto
 ```
 Find material ui icons here: https://material-ui.com/components/material-icons/
 
-## Material kit react dependencies 
-```
-npm i node-sass
-```
 
 ## Use absolute path for import
-In jsconfig.json
+Add a new file "jsconfig.json" with the following text
 ```
 {
   "compilerOptions": {
