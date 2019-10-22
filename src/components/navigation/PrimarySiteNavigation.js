@@ -5,38 +5,29 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import HomeIcon from '@material-ui/icons/Home';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
+import Icon from '@material-ui/core/Icon';
 
 const PrimarySiteNavigation = props => {
-  const { brand } = props;
+  const { brand, items } = props;
+  if (items.length === 0) return null;
+
   return (
     <List subheader={<ListSubheader component="div">{brand}</ListSubheader>}>
-      <ListItem button>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <TrendingUpIcon />
-        </ListItemIcon>
-        <ListItemText primary="Trending" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SubscriptionsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Subscription" />
-      </ListItem>
+      {items.map(item => (
+        <ListItem id={item.id} button component="a" href={item.link}>
+          <ListItemIcon>
+            <Icon>{item.iconName}</Icon>
+          </ListItemIcon>
+          <ListItemText primary={item.name} />
+        </ListItem>
+      ))}
     </List>
   );
 };
 
 PrimarySiteNavigation.propTypes = {
-  brand: PropTypes.string.isRequired
+  brand: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired
 };
 
 export default PrimarySiteNavigation;

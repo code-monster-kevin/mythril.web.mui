@@ -13,10 +13,8 @@ import Menu from '@material-ui/core/Menu';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
 import HeaderMenuItem from 'components/header/HeaderMenuItem';
 import AccountMenuItem from 'components/account/AccountMenuItem';
-import PrimarySiteNavigation from 'components/navigation/PrimarySiteNavigation';
 import useStyles from './PrimaryHeaderStyles';
 
 const PrimaryHeader = props => {
@@ -25,7 +23,6 @@ const PrimaryHeader = props => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const mobileMenuId = 'primary-header-menu-mobile';
-  const brand = 'Mythril Web';
 
   const handleDrawerToggle = () => {
     setLeftMenuOpen(!leftMenuOpen);
@@ -94,7 +91,7 @@ const PrimaryHeader = props => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            {brand}
+            {props.brand}
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -156,7 +153,7 @@ const PrimaryHeader = props => {
               onClick={props.handleLeftMenuClick}
               onKeyDown={props.handleLeftMenuClick}
             >
-              <PrimarySiteNavigation brand={brand} />
+              {props.children}
             </div>
           </Drawer>
         </Hidden>

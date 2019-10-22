@@ -1,8 +1,7 @@
 import React from 'react';
-import MainLayout from 'views/landingpages/MainLayout';
+import MainLayout from 'pages/landingpages/MainLayout';
 
-const App = () => 
-{
+const App = () => {
   return <MainLayout />;
 };
 

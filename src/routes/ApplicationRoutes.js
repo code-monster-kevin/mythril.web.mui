@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomePage from 'views/home/HomePage';
-import PageNotFound from 'views/errorpages/PageNotFound';
+import HomePage from 'pages/home/HomePage';
+import PageNotFound from 'pages/errorpages/PageNotFound';
 
 const ApplicationRoutes = props => {
   return (

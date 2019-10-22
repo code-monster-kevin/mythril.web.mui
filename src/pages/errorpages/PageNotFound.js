@@ -9,9 +9,9 @@ import useStyles from './PageNotFoundStyles';
 
 const PageNotFound = props => {
   const classes = useStyles();
-  const title = "Page Not Found";
-  const description = "The requested URL was not found on this server";
-  const homelabel = "Go To Home Page";
+  const title = 'Page Not Found';
+  const description = 'The requested URL was not found on this server';
+  const homelabel = 'Go To Home Page';
 
   return (
     <EmptyState

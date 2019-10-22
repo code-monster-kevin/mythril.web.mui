@@ -12,6 +12,11 @@ npm i -D @types/prop-types
 npm i -D prettier
 ```
 
+## Install API service (axios)
+```
+npm i axios
+```
+
 ### Prettier run script
 ```
 "prettier": "prettier --single-quote --write \"src/**/*.{js,jsx,json,css}\""
